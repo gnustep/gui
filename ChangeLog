@@ -1,3 +1,17 @@
+2021-05-29 Gregory John Casamento <greg.casamento@gmail.com>
+
+	* Headers/AppKit/AppKit.h: Include NSDictionaryController.h
+	* Headers/AppKit/NSDictionaryController.h: Add declaration
+        for NSDictionaryController.
+	* Headers/AppKit/NSKeyValueBinding.h: Add bindings for
+        dictionary controller.
+	* MISSING: NSDictionaryController removed
+	* Source/externs.m: Add definition for notification for
+        strings defined in controller definition.
+	* Source/GNUmakefile: Add NSDictionaryController.[hm]
+	* Source/NSDictionaryController.m: Implementation of
+        NSDictionaryController.
+
 2021-05-20 Gregory John Casamento <greg.casamento@gmail.com>
 
 	* Headers/AppKit/AppKit.h: Add NSStackView.h to header.
@@ -206,7 +220,7 @@
 
 	* Source/GSLayoutManager.m
 	(-glyphRangeForCharacterRange:actualCharacterRange:): Handle zero
-	length charRagne at end of text correctly.
+	length charRange at end of text correctly.
 
 2020-09-07 Fred Kiefer <FredKiefer@gmx.de>
 

@@ -6,7 +6,6 @@ MISSING HEADERS ( * = difficult, - = quick, + = placeholder, x = won't do )
 > NSCollectionViewGridLayout.h *
 > NSCollectionViewLayout.h *
 > NSCollectionViewTransitionLayout.h *
-> NSDictionaryController.h -
 > NSDiffableDataSource.h *
 > NSDraggingItem.h -
 > NSDraggingSession.h -

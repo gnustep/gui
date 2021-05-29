@@ -86,10 +86,16 @@
 
 @end
 
-// Keys in options dictionary
+// typedefs
+typedef NSString* NSBindingName;
+typedef NSString* NSBindingOption;
 
 // binding values
+#if OS_API_VERSION(MAC_OS_X_VERSION_10_13, GS_API_LATEST)
+typedef NSString *NSBindingName;
+#endif
 
+// Keys in options dictionary
 #if OS_API_VERSION(MAC_OS_X_VERSION_10_4, GS_API_LATEST)
 APPKIT_EXPORT BOOL NSIsControllerMarker(id object);
 
@@ -104,53 +110,60 @@ APPKIT_EXPORT id NSNoSelectionMarker;
 APPKIT_EXPORT id NSNotApplicableMarker;
 
 // Binding name constants
-APPKIT_EXPORT NSString *NSAlignmentBinding;
-APPKIT_EXPORT NSString *NSContentArrayBinding;
-APPKIT_EXPORT NSString *NSContentBinding;
-APPKIT_EXPORT NSString *NSContentObjectBinding;
-APPKIT_EXPORT NSString *NSContentValuesBinding;
-APPKIT_EXPORT NSString *NSEditableBinding;
-APPKIT_EXPORT NSString *NSEnabledBinding;
-APPKIT_EXPORT NSString *NSFontBinding;
-APPKIT_EXPORT NSString *NSFontNameBinding;
-APPKIT_EXPORT NSString *NSFontSizeBinding;
-APPKIT_EXPORT NSString *NSHiddenBinding;
-APPKIT_EXPORT NSString *NSSelectedIndexBinding;
-APPKIT_EXPORT NSString *NSSelectedObjectBinding;
-APPKIT_EXPORT NSString *NSSelectedTagBinding;
-APPKIT_EXPORT NSString *NSSelectedValueBinding;
-APPKIT_EXPORT NSString *NSSelectionIndexesBinding;
-APPKIT_EXPORT NSString *NSSortDescriptorsBinding;
-APPKIT_EXPORT NSString *NSTextColorBinding;
-APPKIT_EXPORT NSString *NSTitleBinding;
-APPKIT_EXPORT NSString *NSToolTipBinding;
-APPKIT_EXPORT NSString *NSValueBinding;
+APPKIT_EXPORT NSBindingName NSAlignmentBinding;
+APPKIT_EXPORT NSBindingName NSContentArrayBinding;
+APPKIT_EXPORT NSBindingName NSContentBinding;
+APPKIT_EXPORT NSBindingName NSContentDictionaryBinding;
+APPKIT_EXPORT NSBindingName NSContentObjectBinding;
+APPKIT_EXPORT NSBindingName NSContentValuesBinding;
+APPKIT_EXPORT NSBindingName NSEditableBinding;
+APPKIT_EXPORT NSBindingName NSEnabledBinding;
+APPKIT_EXPORT NSBindingName NSExcludedKeysBinding;
+APPKIT_EXPORT NSBindingName NSFontBinding;
+APPKIT_EXPORT NSBindingName NSFontNameBinding;
+APPKIT_EXPORT NSBindingName NSFontSizeBinding;
+APPKIT_EXPORT NSBindingName NSHiddenBinding;
+APPKIT_EXPORT NSBindingName NSIncludedKeysBinding;
+APPKIT_EXPORT NSBindingName NSInitialKeyBinding;
+APPKIT_EXPORT NSBindingName NSInitialValueBinding;
+APPKIT_EXPORT NSBindingName NSLocalizedKeyDictionaryBinding;
+APPKIT_EXPORT NSBindingName NSManagedObjectContextBinding;
+APPKIT_EXPORT NSBindingName NSSelectedIndexBinding;
+APPKIT_EXPORT NSBindingName NSSelectedObjectBinding;
+APPKIT_EXPORT NSBindingName NSSelectedTagBinding;
+APPKIT_EXPORT NSBindingName NSSelectedValueBinding;
+APPKIT_EXPORT NSBindingName NSSelectionIndexesBinding;
+APPKIT_EXPORT NSBindingName NSSortDescriptorsBinding;
+APPKIT_EXPORT NSBindingName NSTextColorBinding;
+APPKIT_EXPORT NSBindingName NSTitleBinding;
+APPKIT_EXPORT NSBindingName NSToolTipBinding;
+APPKIT_EXPORT NSBindingName NSValueBinding;
 
 //Binding options constants
-APPKIT_EXPORT NSString *NSAllowsEditingMultipleValuesSelectionBindingOption;
-APPKIT_EXPORT NSString *NSAllowsNullArgumentBindingOption;
-APPKIT_EXPORT NSString *NSConditionallySetsEditableBindingOption;
-APPKIT_EXPORT NSString *NSConditionallySetsEnabledBindingOption;
-APPKIT_EXPORT NSString *NSConditionallySetsHiddenBindingOption;
-APPKIT_EXPORT NSString *NSContinuouslyUpdatesValueBindingOption;
-APPKIT_EXPORT NSString *NSCreatesSortDescriptorBindingOption;
-APPKIT_EXPORT NSString *NSDeletesObjectsOnRemoveBindingsOption;
-APPKIT_EXPORT NSString *NSDisplayNameBindingOption;
-APPKIT_EXPORT NSString *NSDisplayPatternBindingOption;
-APPKIT_EXPORT NSString *NSHandlesContentAsCompoundValueBindingOption;
-APPKIT_EXPORT NSString *NSInsertsNullPlaceholderBindingOption;
-APPKIT_EXPORT NSString *NSInvokesSeparatelyWithArrayObjectsBindingOption;
-APPKIT_EXPORT NSString *NSMultipleValuesPlaceholderBindingOption;
-APPKIT_EXPORT NSString *NSNoSelectionPlaceholderBindingOption;
-APPKIT_EXPORT NSString *NSNotApplicablePlaceholderBindingOption;
-APPKIT_EXPORT NSString *NSNullPlaceholderBindingOption;
-APPKIT_EXPORT NSString *NSPredicateFormatBindingOption;
-APPKIT_EXPORT NSString *NSRaisesForNotApplicableKeysBindingOption;
-APPKIT_EXPORT NSString *NSSelectorNameBindingOption;
-APPKIT_EXPORT NSString *NSSelectsAllWhenSettingContentBindingOption;
-APPKIT_EXPORT NSString *NSValidatesImmediatelyBindingOption;
-APPKIT_EXPORT NSString *NSValueTransformerNameBindingOption;
-APPKIT_EXPORT NSString *NSValueTransformerBindingOption;
+APPKIT_EXPORT NSBindingOption NSAllowsEditingMultipleValuesSelectionBindingOption;
+APPKIT_EXPORT NSBindingOption NSAllowsNullArgumentBindingOption;
+APPKIT_EXPORT NSBindingOption NSConditionallySetsEditableBindingOption;
+APPKIT_EXPORT NSBindingOption NSConditionallySetsEnabledBindingOption;
+APPKIT_EXPORT NSBindingOption NSConditionallySetsHiddenBindingOption;
+APPKIT_EXPORT NSBindingOption NSContinuouslyUpdatesValueBindingOption;
+APPKIT_EXPORT NSBindingOption NSCreatesSortDescriptorBindingOption;
+APPKIT_EXPORT NSBindingOption NSDeletesObjectsOnRemoveBindingsOption;
+APPKIT_EXPORT NSBindingOption NSDisplayNameBindingOption;
+APPKIT_EXPORT NSBindingOption NSDisplayPatternBindingOption;
+APPKIT_EXPORT NSBindingOption NSHandlesContentAsCompoundValueBindingOption;
+APPKIT_EXPORT NSBindingOption NSInsertsNullPlaceholderBindingOption;
+APPKIT_EXPORT NSBindingOption NSInvokesSeparatelyWithArrayObjectsBindingOption;
+APPKIT_EXPORT NSBindingOption NSMultipleValuesPlaceholderBindingOption;
+APPKIT_EXPORT NSBindingOption NSNoSelectionPlaceholderBindingOption;
+APPKIT_EXPORT NSBindingOption NSNotApplicablePlaceholderBindingOption;
+APPKIT_EXPORT NSBindingOption NSNullPlaceholderBindingOption;
+APPKIT_EXPORT NSBindingOption NSPredicateFormatBindingOption;
+APPKIT_EXPORT NSBindingOption NSRaisesForNotApplicableKeysBindingOption;
+APPKIT_EXPORT NSBindingOption NSSelectorNameBindingOption;
+APPKIT_EXPORT NSBindingOption NSSelectsAllWhenSettingContentBindingOption;
+APPKIT_EXPORT NSBindingOption NSValidatesImmediatelyBindingOption;
+APPKIT_EXPORT NSBindingOption NSValueTransformerNameBindingOption;
+APPKIT_EXPORT NSBindingOption NSValueTransformerBindingOption;
 #endif
 
 #endif // OS_API_VERSION

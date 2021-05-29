@@ -81,6 +81,7 @@
 #import <AppKit/NSDataLink.h>
 #import <AppKit/NSDataLinkManager.h>
 #import <AppKit/NSDataLinkPanel.h>
+#import <AppKit/NSDictionaryController.h>
 #import <AppKit/NSDragging.h>
 #import <AppKit/NSEPSImageRep.h>
 #import <AppKit/NSEvent.h>
