@@ -47,7 +47,7 @@ typedef NSInteger NSCollectionElementCategory;
   
 
 typedef NSString *NSCollectionViewDecorationElementKind;
-NSCollectionViewSupplementaryElementKind const NSCollectionElementKindInterItemGapIndicator;
+NSCollectionViewSupplementaryElementKind NSCollectionElementKindInterItemGapIndicator;
 
 @class NSCollectionViewLayoutAttributes;
 @class NSCollectionView;
@@ -149,7 +149,6 @@ typedef NSInteger NSCollectionUpdateAction;
 - (NSSize) contentSizeAdjustment;
 - (void) setContentSizeAdjustment: (NSSize)size;
 
-- (NSSet *) invalidatedItemIndexPaths;
 - (NSDictionary *) invalidatedSupplementaryIndexPaths;
 - (NSDictionary *) invalidatedDecorationIndexPaths;
 @end
@@ -173,7 +172,9 @@ typedef NSInteger NSCollectionUpdateAction;
 
 // Properties
 - (NSCollectionView *) collectionView;
-- (NSSize) collectionViewCOntentSize;
+- (void) setCollectionView: (NSCollectionView *)cv;
+
+- (NSSize) collectionViewContentSize;
  
 // Methods to override for specific layouts...
 - (void) prepareLayout;
