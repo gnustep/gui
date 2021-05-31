@@ -45,6 +45,8 @@ enum
 };
 typedef NSInteger NSCollectionViewDropOperation;
 
+typedef NSString *NSCollectionViewSupplementaryElementKind;
+
 @protocol NSCollectionViewDelegate <NSObject>
 
 - (NSImage *)collectionView:(NSCollectionView *)collectionView
