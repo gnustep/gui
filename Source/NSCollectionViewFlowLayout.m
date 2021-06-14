@@ -28,20 +28,22 @@
 
 - (void) setInvalidateFlowLayoutDelegateMetrics: (BOOL)flag
 {
+  _invalidateFlowLayoutDelegateMetrics = flag;
 }
 
 - (BOOL) invalidateFlowLayoutDelegateMetrics
 {
-  return NO;
+  return _invalidateFlowLayoutDelegateMetrics;
 }
 
 - (void) setInvalidateFlowLayoutAttributes: (BOOL)flag
 {
+  _invalidateFlowLayoutAttributes = flag;
 }
 
 - (BOOL) invalidateFlowLayoutAttributes
 {
-  return NO;
+  return _invalidateFlowLayoutAttributes;
 }
 
 @end
@@ -50,92 +52,102 @@
 
 - (CGFloat) minimumLineSpacing
 {
-  return 0.0;
+  return _minimumLineSpacing;
 }
 
 - (void) setMinimumLineSpacing: (CGFloat)spacing
 {
+  _minimumLineSpacing = spacing;
 }
 
 - (CGFloat) minimumInteritemSpacing
 {
-  return 0.0;
+  return _minimumInteritemSpacing;
 }
 
 - (void) setMinimumInteritemSpacing: (CGFloat)spacing
 {
+  _minimumInteritemSpacing = spacing;
 }
   
 - (NSSize) itemSize
 {
-  return NSZeroSize;
+  return _itemSize;
 }
 
 - (void) setItemSize: (NSSize)itemSize
 {
+  _itemSize = itemSize;
 }
   
 - (NSSize) estimatedItemSize
 {
-  return NSZeroSize;
+  return _estimatedItemSize;
 }
 
 - (void) setEstimatedItemSize: (NSSize)size
 {
+  _estimatedItemSize = size;
 }
   
 - (NSCollectionViewScrollDirection) scrollDirection
 {
-  return NSCollectionViewScrollDirectionVertical;
+  return _scrollDirection;
 }
 
 - (void) setScrollDirection: (NSCollectionViewScrollDirection)direction
 {
+  _scrollDirection = direction;
 }
   
 - (NSSize) headerReferenceSize
 {
-  return NSZeroSize;
+  return _headerReferenceSize;
 }
 
 - (void) setHeaderReferenceSize: (NSSize)size
 {
+  _headerReferenceSize = size;
 }
   
 - (NSSize) footerReferenceSize
 {
-  return NSZeroSize;
+  return _footerReferenceSize;
 }
 
 - (void) setFooterReferenceSize: (NSSize)size
 {
+  _footerReferenceSize = size;
 }
   
 - (NSEdgeInsets) sectionInset
 {
-  return NSEdgeInsetsZero;
+  return _sectionInset;
 }
 
 - (void) setSectionInset: (NSEdgeInsets)inset
 {
+  _sectionInset = inset;
 }
 
 - (BOOL) sectionHeadersPinToVisibleBounds
 {
-  return NO;
+  return _sectionHeadersPinToVisibleBounds;
 }
 
 - (void) setSectionHeadersPinToVisibleBounds: (BOOL)f
 {
+  _sectionHeadersPinToVisibleBounds = f;
 }
 
 - (BOOL) sectionFootersPinToVisibleBounds
 {
-  return NO;
+  return _sectionFootersPinToVisibleBounds;
 }
 
 - (void) setSectionFootersPinToVisibleBounds: (BOOL)f
 {
+  _sectionFootersPinToVisibleBounds = f;
 }
 
 - (BOOL) sectionAtIndexIsCollapsed: (NSUInteger)sectionIndex
