@@ -34,12 +34,14 @@
 #import "AppKit/NSClipView.h"
 #import "AppKit/NSCollectionView.h"
 #import "AppKit/NSCollectionViewItem.h"
+#import "AppKit/NSCollectionViewLayout.h"
 #import "AppKit/NSEvent.h"
 #import "AppKit/NSGraphics.h"
 #import "AppKit/NSImage.h"
 #import "AppKit/NSKeyValueBinding.h"
 #import "AppKit/NSPasteboard.h"
 #import "AppKit/NSWindow.h"
+
 #import "GSGuiPrivate.h"
 
 #include <math.h>
@@ -52,7 +54,7 @@ static NSString* NSCollectionViewMaxNumberOfColumnsKey       = @"NSMaxNumberOfGr
 static NSString* NSCollectionViewSelectableKey               = @"NSSelectable";
 static NSString* NSCollectionViewAllowsMultipleSelectionKey  = @"NSAllowsMultipleSelection";
 static NSString* NSCollectionViewBackgroundColorsKey         = @"NSBackgroundColors";
-
+static NSString* NSCollectionViewLayoutKey                   = @"NSCollectionViewLayout";
 /*
  * Class variables
  */
@@ -100,6 +102,7 @@ static NSString *placeholderItem = nil;
     {
       placeholderItem = @"Placeholder";
       [self exposeBinding: NSContentBinding];
+      [self setVersion: 0];
     }
 }
 

@@ -207,7 +207,7 @@ typedef NSInteger NSCollectionUpdateAction;
 
 
 // Update support
-- (void) prepareForCollectionViewUpdates: (NSArray<NSCollectionViewUpdateItem *> *)updateItems;
+- (void) prepareForCollectionViewUpdates: (NSArray *)updateItems;
 - (void) finalizeCollectionViewUpdates;
 - (void) prepareForAnimatedBoundsChange: (NSRect)oldBounds;
 - (void) finalizeAnimatedBoundsChange;

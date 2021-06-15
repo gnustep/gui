@@ -37,6 +37,7 @@
 
 @class NSCollectionViewItem;
 @class NSCollectionView;
+@class NSCollectionViewLayout;
 
 enum
 {  
@@ -103,6 +104,8 @@ namesOfPromisedFilesDroppedAtDestination:(NSURL *)dropURL
   
   NSUInteger _draggingOnRow;
   NSUInteger _draggingOnIndex;
+
+  NSCollectionViewLayout *_collectionViewLayout;
 }
 
 - (BOOL) allowsMultipleSelection;
