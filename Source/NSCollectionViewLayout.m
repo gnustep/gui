@@ -308,7 +308,7 @@
 
 
 // Update support
-- (void) prepareForCollectionViewUpdates: (NSArray<NSCollectionViewUpdateItem *> *)updateItems
+- (void) prepareForCollectionViewUpdates: (NSArray *)updateItems
 {
 }
 
